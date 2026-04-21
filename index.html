@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/nse/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -35,7 +35,7 @@
   --danger:#A63A2A;--dangerSoft:#F1D9D4;
   --info:#3A5A78;--infoSoft:#DCE5EC;
   --fontDisplay:'Fraunces','Cormorant Garamond',Georgia,serif;
-  --fontUI:'Inter',-apple-system,'Helvetica Neue',system-ui,sans-serif;
+  --fontUI:-apple-system,BlinkMacSystemFont,'SF Pro Text','SF Pro Display','Helvetica Neue',system-ui,sans-serif;
   --fontMono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
   --r:12px;--rs:10px;
 }
@@ -43,7 +43,7 @@
 body{font-family:var(--fontUI);background:var(--bg);color:var(--text);min-height:100vh;max-width:480px;margin:0 auto;padding-bottom:80px;-webkit-font-smoothing:antialiased}
 
 /* HEADER */
-.header{background:var(--bg);padding:14px 20px 14px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.header{background:var(--bg);padding:6px 20px 6px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
 .header-logo{display:flex;align-items:center;gap:10px}
 .header-logo svg{flex-shrink:0}
 .header-wordmark{font-family:var(--fontDisplay);font-weight:500;font-size:1.2rem;color:var(--black);letter-spacing:-0.02em;line-height:1;display:inline-flex;align-items:baseline;gap:0}
@@ -374,11 +374,11 @@ body{font-family:var(--fontUI);background:var(--bg);color:var(--text);min-height
 .auth-terms{font-size:0.63rem;color:var(--muted);margin-bottom:14px;line-height:1.6}
 
 /* HOME — GREETING BAND */
-.home-band{background:var(--bg);padding:18px 20px 20px;border-bottom:1px solid var(--border);margin-bottom:0}
-.home-date-label{font-family:var(--fontMono);font-size:0.6rem;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:8px}
-.home-greeting{font-family:var(--fontDisplay);font-size:2rem;font-weight:400;color:var(--black);line-height:1.1;letter-spacing:-0.02em;margin-bottom:6px}
+.home-band{background:var(--bg);padding:4px 20px 6px;border-bottom:1px solid var(--border);margin-bottom:0}
+.home-date-label{font-family:var(--fontMono);font-size:0.55rem;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:1px}
+.home-greeting{font-family:var(--fontDisplay);font-size:1.3rem;font-weight:400;color:var(--black);line-height:1.1;letter-spacing:-0.02em;margin-bottom:0}
 .home-greeting em{font-style:italic;color:var(--accent);font-weight:400}
-.home-summary{font-family:var(--fontUI);font-size:0.88rem;color:var(--muted);line-height:1.45}
+.home-summary{font-family:var(--fontUI);font-size:0.7rem;color:var(--muted);line-height:1.3;margin-top:1px}
 .home-summary b{color:var(--black);font-weight:600}
 
 /* HOME — SECTION LABELS */
@@ -540,15 +540,16 @@ body{font-family:var(--fontUI);background:var(--bg);color:var(--text);min-height
       <path d="M 18.5 18.2 C 14 15, 9 11, 6 7.5 C 5.2 6.6, 5.6 5.2, 6.8 5 C 11.5 4.3, 16.8 6, 20.8 9.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       <path d="M 29.5 29.8 C 34 33, 39 37, 42 40.5 C 42.8 41.4, 42.4 42.8, 41.2 43 C 36.5 43.7, 31.2 42, 27.2 38.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       <circle cx="24" cy="24" r="9.2" stroke="currentColor" stroke-width="2.6" fill="none"/>
-      <circle cx="24" cy="24" r="2.4" fill="#C85A28"/>
+      <circle cx="24" cy="24" r="2.4" fill="#003087"/>
     </svg>
     <div>
       <div class="header-wordmark"><span>Phaco</span><span class="italic">log</span></div>
-      <div class="header-sub" id="header-nome-sub">Logbook<span style="color:#003087;font-weight:700;font-size:0.58rem;letter-spacing:0.06em;font-family:-apple-system,sans-serif"> · GENOM</span></div>
+      <div class="header-sub" id="header-nome-sub">Logbook</div>
     </div>
   </div>
   <div class="header-right">
-    <div class="header-date" id="headerDate"></div>
+    <!-- Genom Oftalmologia logo -->
+    <img src="data:image/png;base64,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" alt="Genom Oftalmologia" style="height:90px;width:auto;mix-blend-mode:multiply;flex-shrink:0">
     <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()" title="Alternar tema" aria-label="Alternar modo escuro">
       <svg id="theme-icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
       <svg id="theme-icon-sun" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -3609,7 +3610,7 @@ function importarDoMapa(){
 // ── INIT ─────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded',function(){
   var d=new Date();
-  document.getElementById('headerDate').textContent=d.toLocaleDateString('pt-BR',{weekday:'short',day:'numeric',month:'short'});
+  var hdEl=document.getElementById('headerDate');if(hdEl)hdEl.textContent=d.toLocaleDateString('pt-BR',{weekday:'short',day:'numeric',month:'short'});
   document.getElementById('f-data').value=hoje();
   var _calM=document.getElementById('cal-month-modal');if(_calM)_calM.addEventListener('click',function(e){if(e.target===this)closeCalMonth();});
   loadDB();initIntercSteps();initSupabase();checkA2HS();initTheme();initDiary();
